@@ -32,8 +32,8 @@ const Main = (props) => {
             })
         }
         
-        setData(updatedData)
         props.handleMySkyWrite({data:updatedData})
+        setData(updatedData)
 
     }
 
@@ -50,8 +50,8 @@ const Main = (props) => {
             item:item,
             complete:false
         }
-        setData([newItem,...data])
         props.handleMySkyWrite({data:[newItem,...data]})
+        setData([newItem,...data])
         e.target.reset()
     }
 
@@ -65,7 +65,7 @@ const Main = (props) => {
         <div className="w-5/6 md:w-3/5 lg:2/5 bg-white rounded-md shadow-lg mt-5 p-2 relative" 
         style={{height:95+"vh"}}>
             <button className="absolute top-2 right-2" onClick={props.handleMySkyLogout}>
-                <img src="logout.png" className="w-10 h-10" />
+                <img src="logout.png" className="w-8 h-8" />
             </button>
             <div className="w-full flex items-center justify-center">
                 <img src="list.png"  />

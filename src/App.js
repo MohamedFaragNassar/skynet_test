@@ -50,6 +50,7 @@ function App() {
       if (status) {
         setUserID(await mySky.userID());
         setDataKey(mySky.userID())
+        window.location.reload()
       }
   
     
@@ -77,6 +78,7 @@ function App() {
       try{
         const { data, dataLink } = await mySky.getJSON(filePath);
         if(data?.data?.length > 0){
+          console.log("lllllllllllllllll")
           handler(data?.data)
         }
         
